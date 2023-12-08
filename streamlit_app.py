@@ -17,6 +17,16 @@ st.write("""
 Hello *world!*
 """)
 
+genre = st.radio(
+    "What's your favorite movie genre",
+    [":rainbow[Comedy]", "***Drama***", "Documentary :movie_camera:"],
+    captions = ["Laugh out loud.", "Get the popcorn.", "Never stop learning."])
+
+if genre == ':rainbow[Comedy]':
+    st.write('You selected comedy.')
+else:
+    st.write("You didn\'t select comedy.")
+
 num_points = st.slider("Number of points in spiral", 1, 10000, 1100)
 num_turns = st.slider("Number of turns in spiral", 1, 300, 31)
 
